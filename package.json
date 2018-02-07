@@ -57,6 +57,8 @@
     "bedrock-webpack": "^1.2.0",
     "bedrock-website-user-http": "^2.0.0",
     "cors": "^2.8.4",
+    "did-client-veres-one": "veres-one/did-client-veres-one#implementation",
+    "did-veres-one": "veres-one/did-veres-one#implementation",
     "font-awesome": "^4.7.0",
     "lodash": "^4.6.1",
     "request": "^2.79.0",

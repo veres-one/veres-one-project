@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+/**
+ * A command line tool for managing accelerator capabilities.
+ *
+ * Copyright (c) 2018 Digital Bazaar, Inc. All rights reserved.
+ */
+const program = require('commander');
+const helpers = require('./lib/helpers');
+
+// setup the command line
+program
+  .usage('command [options]')
+  .description('A program to manage Veres One Accelerator capabilities')
+  .on('--help', () => {
+    console.log('\n   Examples:');
+    console.log('    $ accelerator grant did:v1:nym:1234');
+    console.log('    $ accelerator revoke did:v1:nym:1234 -r "unpaid dues"');
+    console.log();
+  })
+  .option('-r, --reason [reason]', 'The reason for revocation')
+  .option('-m, --mode [mode]', 'Mode of operation',
+    /^(live|testnet|dev)$/i, 'testnet')
+  .option('-v, --verbose', 'Verbose output')
+  .version('0.1.0');
+
+// grant an accelerator capability (i.e. make a DID entity an accelerator)
+program
+  .command('grant <did>')
+  .description('Grant an Accelerator capability to a DID entity')
+  .action(did => {
+    /*helpers.registerAccelerator({
+      invoker: did,
+      // FIXME:
+      hostname: 'veres.one.localhost',
+      //env: 'dev',
+      //creator:
+      //privateKeyPem:
+    });*/
+    console.log('grant', did);
+  });
+
+// revoke an accelerator capability
+program
+  .command('revoke <did>')
+  .description('Revoke an Accelerator capability from a DID entity')
+  .action(did => {
+    console.log('revoke', did, program.reason);
+    throw new Error('Not implemented');
+  });
+
+program.parse(process.argv);
+
+if(program.args.length < 1) {
+  program.help();
+}
