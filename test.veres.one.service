@@ -1,5 +1,5 @@
 [Service]
-ExecStart=/usr/bin/node /home/bedrock/veres-one-project/project.test.veres.one.js
+ExecStart=/usr/bin/node /home/bedrock/veres-one-project/test.veres.one.js
 WorkingDirectory=/home/bedrock/veres-one-project
 Restart=always
 StandardOutput=syslog

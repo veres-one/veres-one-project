@@ -7,7 +7,7 @@ const path = require('path');
 
 // common paths
 config.paths.cache = path.join(__dirname, '..', '.cache');
-config.paths.log = path.join('/var', 'log', 'project.test.veres.one');
+config.paths.log = path.join('/var', 'log', 'test.veres.one');
 
 // core
 // 0 means use # of cpus
@@ -28,7 +28,7 @@ bedrock.events.on('bedrock-express.ready', app => {
 config.server.port = 20081;
 config.server.httpPort = 20080;
 config.server.bindAddr = ['0.0.0.0'];
-config.server.domain = 'project.test.veres.one';
+config.server.domain = 'test.veres.one';
 config.server.host = config.server.domain;
 
 // express info
