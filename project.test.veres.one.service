@@ -1,0 +1,13 @@
+[Service]
+ExecStart=/usr/bin/node /home/bedrock/veres-one-project/project.test.veres.one.js
+WorkingDirectory=/home/bedrock/veres-one-project
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=veres-one-project
+User=bedrock
+Group=bedrock
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

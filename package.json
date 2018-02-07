@@ -1,0 +1,100 @@
+{
+  "name": "veres-one-project",
+  "version": "0.0.1-0",
+  "private": true,
+  "main": "lib",
+  "less": "main.less",
+  "browser": "index.js",
+  "scripts": {
+    "start": "node veres-one-project.localhost.js",
+    "postinstall": "node veres-one-project.localhost.js compile-less"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "bedrock": "digitalbazaar/bedrock#jsonld-1.1",
+    "bedrock-agreement": "^1.0.2",
+    "bedrock-angular": "^4.0.1",
+    "bedrock-angular-agreement": "digitalbazaar/bedrock-angular-agreement#material",
+    "bedrock-angular-alert": "digitalbazaar/bedrock-angular-alert#material",
+    "bedrock-angular-authn": "digitalbazaar/bedrock-angular-authn#material",
+    "bedrock-angular-authn-password": "digitalbazaar/bedrock-angular-authn-password#material",
+    "bedrock-angular-demo-warning": "digitalbazaar/bedrock-angular-demo-warning#material",
+    "bedrock-angular-footer": "digitalbazaar/bedrock-angular-footer#material",
+    "bedrock-angular-form": "digitalbazaar/bedrock-angular-form#peerDeps",
+    "bedrock-angular-header": "digitalbazaar/bedrock-angular-header#material",
+    "bedrock-angular-identity": "^3.0.3",
+    "bedrock-angular-jsonld": "digitalbazaar/bedrock-angular-jsonld#0.5.x",
+    "bedrock-angular-material": "^1.0.0",
+    "bedrock-angular-modal": "github:digitalbazaar/bedrock-angular-modal#material",
+    "bedrock-angular-model": "^3.0.0",
+    "bedrock-angular-navbar": "github:digitalbazaar/bedrock-angular-navbar#material",
+    "bedrock-angular-resolver": "^3.0.1",
+    "bedrock-angular-resource": "^3.0.0",
+    "bedrock-angular-session": "digitalbazaar/bedrock-angular-session#material",
+    "bedrock-angular-ui": "digitalbazaar/bedrock-angular-ui#material",
+    "bedrock-authn-password": "^3.0.2",
+    "bedrock-did-client": "^1.1.1",
+    "bedrock-docs": "^2.1.0",
+    "bedrock-event-log": "^2.1.2",
+    "bedrock-express": "^2.0.6",
+    "bedrock-i18n": "^2.0.1",
+    "bedrock-identity": "^4.6.0",
+    "bedrock-identity-http": "^1.2.1",
+    "bedrock-jobs": "^2.0.3",
+    "bedrock-key": "^4.0.0",
+    "bedrock-key-http": "^2.2.0",
+    "bedrock-mail": "^2.0.3",
+    "bedrock-mongodb": "^4.0.0",
+    "bedrock-passport": "^3.3.0",
+    "bedrock-permission": "^2.3.2",
+    "bedrock-rest": "^2.1.0",
+    "bedrock-server": "^2.2.0",
+    "bedrock-session-http": "^3.0.0",
+    "bedrock-session-mongodb": "^2.0.2",
+    "bedrock-test": "^2.0.0",
+    "bedrock-validation": "^2.2.0",
+    "bedrock-views": "digitalbazaar/bedrock-views#peerDeps",
+    "bedrock-webpack": "^1.2.0",
+    "bedrock-website-user-http": "^2.0.0",
+    "cors": "^2.8.4",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.6.1",
+    "request": "^2.79.0",
+    "uuid": "^3.1.0"
+  },
+  "bedrock": {
+    "browserDependencies": [
+      "bedrock-angular",
+      "bedrock-angular-authn",
+      "bedrock-angular-authn-password",
+      "bedrock-angular-demo-warning",
+      "bedrock-angular-footer",
+      "bedrock-angular-header",
+      "bedrock-angular-identity",
+      "bedrock-angular-jsonld",
+      "bedrock-angular-material",
+      "bedrock-angular-navbar",
+      "bedrock-angular-resolver",
+      "bedrock-angular-session",
+      "lodash",
+      "uuid"
+    ],
+    "manifest": {
+      "jsonld": {
+        "main": "dist/jsonld.js"
+      }
+    },
+    "systemjs": {
+      "packages": {
+        "uuid": {
+          "map": {
+            "./lib/rng.js": "./lib/rng-browser.js"
+          }
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": ">=7.10.1"
+  }
+}
