@@ -20,7 +20,7 @@
     "bedrock-angular-authn-password": "digitalbazaar/bedrock-angular-authn-password#material",
     "bedrock-angular-demo-warning": "digitalbazaar/bedrock-angular-demo-warning#material",
     "bedrock-angular-footer": "digitalbazaar/bedrock-angular-footer#material",
-    "bedrock-angular-form": "digitalbazaar/bedrock-angular-form#peerDeps",
+    "bedrock-angular-form": "digitalbazaar/bedrock-angular-form#material-only",
     "bedrock-angular-header": "digitalbazaar/bedrock-angular-header#material",
     "bedrock-angular-identity": "^3.0.3",
     "bedrock-angular-jsonld": "digitalbazaar/bedrock-angular-jsonld#0.5.x",
