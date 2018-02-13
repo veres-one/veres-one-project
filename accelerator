@@ -48,6 +48,10 @@ program
     throw new Error('Not implemented');
   });
 
+process.on('unhandledRejection', error => {
+  console.error(error);
+});
+
 program.parse(process.argv);
 
 if(program.args.length < 1) {
