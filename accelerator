@@ -19,7 +19,7 @@ program
   })
   .option('-r, --reason [reason]', 'The reason for revocation')
   .option('-m, --mode [mode]', 'Mode of operation',
-    /^(live|testnet|dev)$/i, 'testnet')
+    /^(live|test|dev)$/i, 'test')
   .option('-v, --verbose', 'Verbose output')
   .version('0.1.0');
 
